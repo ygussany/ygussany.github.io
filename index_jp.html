@@ -18,6 +18,23 @@
 
     gtag('config', 'UA-71831084-2');
   </script>
+  
+  <script>
+  $(document).ready( function()
+	{
+	  var jikan = new Date();
+	  var second = jikan.getSeconds();
+	  var minute = jikan.getMinutes();
+	  var x = (minute % 5) * 60 + second % 60;
+	  if (x == 0) $(face).attr("src", "img/penguin.png");
+	  else if (second % 60 == 0) $(face).attr("src", "img/sake.jpg");
+	  else if (second % 20 == 0) $(face).attr("src", "img/prof+.png");
+	  else if (second % 5 == 0) $(face).attr("src", "img/prof.png");
+	  else if (second % 2 == 0) $(face).attr("src", "img/tree.jpg");
+	  else $(face).attr("src", "img/book.jpg");
+	}
+  );
+  </script>
 </head>
 
 <body bgcolor="#F0FFF0" text="#000000" style="font-family: 'Times New Roman', 'MS Serif', 'Arial';">
@@ -59,24 +76,6 @@
     <a href="./index.html">>> English Version</a>
   </p>
 </div>
-
-
-  <script>
-  $(function()
-	{
-	  var jikan = new Date();
-	  var second = jikan.getSeconds();
-	  var minute = jikan.getMinutes();
-	  var x = (minute % 5) * 60 + second % 60;
-	  if (x == 0) $(face).attr("src", "img/penguin.png");
-	  else if (second % 60 == 0) $(face).attr("src", "img/sake.jpg");
-	  else if (second % 20 == 0) $(face).attr("src", "img/prof+.png");
-	  else if (second % 5 == 0) $(face).attr("src", "img/prof.png");
-	  else if (second % 2 == 0) $(face).attr("src", "img/tree.jpg");
-	  else $(face).attr("src", "img/book.jpg");
-	}
-  );
-  </script>
 
 
 
