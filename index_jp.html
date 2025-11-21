@@ -20,7 +20,7 @@
   </script>
   
   <script>
-  $(document).ready( function()
+  window.onload = function()
 	{
 	  var jikan = new Date();
 	  var second = jikan.getSeconds();
@@ -33,7 +33,6 @@
 	  else if (second % 2 == 0) $(face).attr("src", "img/tree.jpg");
 	  else $(face).attr("src", "img/book.jpg");
 	}
-  );
   </script>
 </head>
 
